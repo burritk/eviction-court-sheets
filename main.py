@@ -65,14 +65,15 @@ search.click()
 teears = driver.find_elements_by_tag_name('tr')
 for element in teears:
     if ',' in element.text:
-        link = element.find_element_by_tag_name('a')
-        link.click()
-        panel = wait_for_xpath(driver, '//*[@id="ptyInfo"]')
-        titlebar = driver.find_elements_by_tag_name('h2')
-        cvg = titlebar.text.strip()
-        headers = panel.find_elements_by_class_name('subSectionHeader2')
-        print 'j'
-        pass  # if is name
+        print 'NAME: ' + element.text
+        # link = element.find_element_by_tag_name('a')
+        # link.click()
+        # panel = wait_for_xpath(driver, '//*[@id="ptyInfo"]')
+        # titlebar = driver.find_elements_by_tag_name('h2')
+        # cvg = titlebar.text.strip()
+        # headers = panel.find_elements_by_class_name('subSectionHeader2')
+        # print 'j'
+        # pass  # if is name
 
 print(search)
 
